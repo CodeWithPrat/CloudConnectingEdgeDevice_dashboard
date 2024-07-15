@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 import cmtilogo from "../../Images/CCED_imgs/cmtiLogo.jpeg";
 import idimg from "../../Images/CCED_imgs/idCard.jpg";
 import machineImg from "../../Images/CCED_imgs/machine.jpg";
-import "./MainPage.css"
+import MainCircularGuage from './CircularGauge';
+import "./MainPage.css";
+import Task from './OpTask';
+
 function MainPage() {
     const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -15,7 +18,7 @@ function MainPage() {
     }, []);
 
     return (
-        <div className="min-h-screen flex flex-col justify-between bg-gray-100">
+        <div className="w-full bg-gray-100">
             {/* Header */}
             <div className="w-full flex flex-col md:flex-row items-center justify-between bg-white shadow-md py-4 px-8">
                 <img src={cmtilogo} alt="Company Logo" className="h-20 md:h-36 mr-4 mb-4 md:mb-0" />
@@ -27,15 +30,41 @@ function MainPage() {
                     <p className="text-sm md:text-lg">{currentTime.toLocaleTimeString()}</p>
                 </div>
             </div>
-            <div className="flex flex-wrap justify-center items-center p-4">
-                <div className="w-full md:w-1/2 p-2">
-                    <img src={idimg} alt="IDImage" className="idCard h-auto object-contain" />
+
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 py-5">
+                <div className="flex flex-col">
+                    <img src={idimg} alt="ID " className="profile_img object-contain" />
                 </div>
-                <div className="w-full md:w-1/2 p-2">
-                    <img src={machineImg} alt="MachineImage" className="machineImg h-auto object-contain" />
+                <div className="flex flex-col">
+                    <img src={machineImg} alt="Machine" className="machine_img object-contain -ml-5" />
+
                 </div>
+                <div className="main_task w-full px-2">
+                    <Task />
+                </div>
+                
             </div>
-            /
+
+            <div className="-ml-16">
+                    <div className="">
+                        <MainCircularGuage />
+                    </div>
+                </div>
+
+
+
+            <div className="flex flex-wrap justify-center w-full items-center p-4 gap-7 ">
+                <button className="mainpage_btn text-white text-center font-bold w-96 h-32 md:w-96 md:h-48 lg:w-[30rem] lg:h-56 rounded-full shadow-lg flex items-center justify-center">
+                    <span className="text-xs md:text-base lg:text-lg px-2">Machine Specification and Job Drawings</span>
+                </button>
+                <button className="mainpage_btn text-white text-center font-bold w-96 h-32 md:w-96 md:h-48 lg:w-[30rem] lg:h-56 rounded-full shadow-lg  flex items-center justify-center">
+                    <span className="text-xs md:text-base lg:text-lg px-2">Real-Time Data</span>
+                </button>
+                <button className="mainpage_btn text-white text-center font-bold w-96 h-32 md:w-96 md:h-48 lg:w-[30rem] lg:h-56 rounded-full shadow-lg flex items-center justify-center">
+                    <span className="text-xs md:text-base lg:text-lg px-2">Overall Equipment Effectiveness</span>
+                </button>
+            </div>
         </div>
     )
 }
