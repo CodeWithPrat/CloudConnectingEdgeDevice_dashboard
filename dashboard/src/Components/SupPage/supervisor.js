@@ -3,6 +3,7 @@ import cmtilogo from '../../Images/CCED_imgs/cmtiLogo.jpeg'; // Adjust the impor
 
 const Supervisor = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
+  
 
   useEffect(() => {
     const timer = setInterval(() => {

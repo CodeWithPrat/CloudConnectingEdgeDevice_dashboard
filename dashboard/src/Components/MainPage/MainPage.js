@@ -41,6 +41,7 @@ function MainPage() {
 
                 </div>
                 <div className="main_task w-full px-2">
+                    
                     <Task />
                 </div>
                 

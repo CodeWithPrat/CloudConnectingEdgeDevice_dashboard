@@ -4,6 +4,7 @@ import cmtilogo from '../../Images/CCED_imgs/cmtiLogo.jpeg'; // Adjust the impor
 
 function Task() {
     const [currentTime, setCurrentTime] = useState(new Date());
+    const [formData, setFormData] = useState(null)
     const [assignedJob, setAssignedJob] = useState('');
     const [assignedShifts, setAssignedShifts] = useState('');
     const [optimumTime, setOptimumTime] = useState('');
