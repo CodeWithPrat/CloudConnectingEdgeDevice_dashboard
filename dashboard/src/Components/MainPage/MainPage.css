@@ -1,8 +1,38 @@
-.idCard{
+.idCard {
     height: 500px;
 }
 
-.machineImg{
-    height: 800px;
-    width: 600px;
+.profile_img {
+    height: 500px;
+    width: 700px;
+}
+
+.machine_img {
+    height: 550px;
+    width: 800px;
+}
+
+.mainpage_btn {
+    background-image: linear-gradient(to top, #c6bef8 0%, #7c74f1 100%);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-left: 10px;
+    border: 5px outset rgb(168, 131, 253);
+    padding: 25px;
+}
+
+.mainpage_btn:hover{
+    background-image: linear-gradient(to top, #7c74f1 0%, #c6bef8 100%);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    color: white;
+    border: 5px outset rgb(168, 131, 253);
+    padding: 25px;
+    transition: background-image 0.5s, box-shadow 0.5s, color 0.5s;
+    cursor: pointer;
+    transform: translateY(-2px);
 }
