@@ -5,7 +5,7 @@ import './RTIndex.css'; // Import the CSS for styling and animations
 import Spindle from './Spindle';
 
 const RTIndex = () => {
-  const [activeTab, setActiveTab] = useState('spindle');
+  const [activeTab, setActiveTab] = useState('spin');
 
   const handleComponentChange = (component) => {
     setActiveTab(component);
