@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import FeedDrive from './FeedDrive';
 import './RTIndex.css'; // Import the CSS for styling and animations
 import Spindle from './Spindle';
