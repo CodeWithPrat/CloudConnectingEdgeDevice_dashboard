@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
 import axios from "axios";
+import React, { useEffect, useState } from "react";
 import Thermometer from "react-thermometer-component";
 import TempChart from "./TempChart";
 
@@ -11,7 +11,7 @@ const Temperature = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://cmti-edge.online/smddc/AMSINDIA.php"
+          "https://cmti-edge.online/digitaltwin/modbus_tcp.php"
         );
         if (response.status === 200) {
           setChartData(response.data);
@@ -46,7 +46,7 @@ const Temperature = () => {
             <div className="w-48 h-64 mb-4">
               <Thermometer
                 theme="light"
-                value={chartData?.[`tc${sensorNum}`] / 1}
+                value={chartData?.[`temp${sensorNum}`] / 1}
                 max={200}
                 size="large"
                 height={250}
@@ -55,7 +55,7 @@ const Temperature = () => {
               />
             </div>
             <p className="text-2xl font-bold text-blue-500">
-              {chartData?.[`tc${sensorNum}`]}°C
+              {chartData?.[`temp${sensorNum}`]}°C
             </p>
           </div>
         ))}
@@ -66,11 +66,11 @@ const Temperature = () => {
           <button
             key={sensorNum}
             className={`py-3 px-6 rounded-full text-lg font-semibold transition-all duration-300 ease-in-out ${
-              selectedSensor === `TC${sensorNum}`
+              selectedSensor === `temp${sensorNum}`
                 ? "bg-blue-800 text-white shadow-lg transform scale-105"
                 : "bg-blue-950 text-white hover:bg-blue-100"
             }`}
-            onClick={() => handleSensorClick(`TC${sensorNum}`)}
+            onClick={() => handleSensorClick(`temp${sensorNum}`)}
           >
             Temperature Sensor {sensorNum.toString().padStart(2, '0')}
           </button>

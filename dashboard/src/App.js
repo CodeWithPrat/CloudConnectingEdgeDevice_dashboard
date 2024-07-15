@@ -8,7 +8,7 @@ import RTIndex from './Components/RealTimeData/RTIndex';
 import Spindle from './Components/RealTimeData/Spindle';
 import RS485 from './Components/RS485/RS485';
 import OeeGauges from './Components/OEE/OeeGauges';
-
+import MainIndex from './Components/RealTimeData/MainIndex';
 import Supervisor from './Components/SupPage/supervisor';
 import Temperature from './Components/Temperature/Temperature';
 
@@ -27,6 +27,7 @@ function App() {
           <Route path="/RS485" element={<RS485 />} />
           <Route path="/oee" element={<OeeGauges/>} />
           <Route path="/rtmain" element={<RTIndex />} />
+          <Route path="/mainindex" element={<MainIndex />} />
 
         </Routes>
       </div>

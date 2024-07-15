@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import FeedDrive from './FeedDrive';
-import './RTIndex.css'; // Import the CSS for styling and animations
 import Spindle from './Spindle';
 
 const RTIndex = () => {
@@ -12,6 +11,9 @@ const RTIndex = () => {
 
   return (
     <div className="w-full">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-blue-800 mb-5 mt-3" style={{ fontFamily: 'serif' }}>
+        MACHINE REAL TIME DATA
+      </h2>
       <div className="ms-3 p-3">
         <div className="tem_buttong flex justify-center items-center" role="group">
           <button
