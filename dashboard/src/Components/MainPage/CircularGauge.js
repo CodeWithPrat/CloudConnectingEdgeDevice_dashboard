@@ -170,11 +170,11 @@ const MainCircularGauge = () => {
   const [feedOverride, setFeedOverride] = useState([75]);
 
   useEffect(() => {
-    axios.get('https://cmti-edge.online/digitaltwin/spindle.php')
+    axios.get('https://cmti-edge.online/digitaltwin/override.php')
       .then(response => {
         const data = response.data;
-        setSpindleOverride([data.speed]);
-        setFeedOverride([data.voltage]);
+        setSpindleOverride([data.spindle]);
+        setFeedOverride([data.feed]);
       })
       .catch(error => {
         console.error("There was an error fetching the data!", error);
