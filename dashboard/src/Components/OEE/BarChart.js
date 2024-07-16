@@ -21,12 +21,12 @@ const BarChart = () => {
 
   // Fetch data from API on component mount
   useEffect(() => {
-    axios.get('https://cmti-edge.online/digitaltwin/spindle.php')
+    axios.get('https://cmti-edge.online/digitaltwin/oee.php')
       .then(response => {
         const data = response.data;
-        setSpindleOverride([data.speed]);
-        setFeedOverride([data.voltage]);
-        setTemperature([data.temperature]);
+        setSpindleOverride([data.avai]);
+        setFeedOverride([data.performance]);
+        setTemperature([data.quality]);
         setLabels([getCurrentMonthAndDate()]);
       })
       .catch(error => {
