@@ -54,27 +54,10 @@ const OeeGauges = () => {
 
   return (
     <div className='w-full'>
-      <h1 className='flex justify-center items-center text-4xl font-semibold'>OEE</h1>
+      <h1 className='flex justify-center items-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold'>OEE</h1>
       <div className="melt_back  lg:w-1/2">
         <Breadcrumb />
       </div>
-      <div id="chart" className='flex w-full justify-center items-center gap-7 py-10'>
-        {series.map((item, index) => (
-          <div className='w-full' key={index}>
-            <h2 className='flex justify-center items-center text-2xl font-medium'>{item.name}</h2>
-            <ReactApexChart
-              options={{
-                ...options,
-                labels: [item.name]
-              }}
-              series={[item.data]}
-              type="radialBar"
-              height={350}
-            />
-          </div>
-        ))}
-      </div>
-      <h1 className='flex justify-center items-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold'>OEE</h1>
       <div id="chart" className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-5 md:gap-7 lg:gap-10 py-6 sm:py-8 md:py-10 lg:py-12'>
   {series.map((item, index) => (
     <div className='w-full' key={index}>
