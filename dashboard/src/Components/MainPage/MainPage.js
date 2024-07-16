@@ -66,7 +66,7 @@ function MainPage() {
                     <span className="text-xs md:text-base lg:text-lg px-2">Real-Time Data</span>
                 </button>
                 <button className="mainpage_btn text-white text-center font-bold w-96 h-32 md:w-96 md:h-48 lg:w-[30rem] lg:h-56 rounded-full shadow-lg flex items-center justify-center"
-                    onClick={() => handleNavigate('/overall-equipment-effectiveness')}>
+                    onClick={() => handleNavigate('/oee')}>
                     <span className="text-xs md:text-base lg:text-lg px-2">Overall Equipment Effectiveness</span>
                 </button>
             </div>

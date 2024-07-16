@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Thermometer from "react-thermometer-component";
 import TempChart from "./TempChart";
+import Breadcrumb from '../Breadcrumb/Breadcrumb';
 
 const Temperature = () => {
   const [chartData, setChartData] = useState(null);
@@ -38,7 +39,9 @@ const Temperature = () => {
       <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-blue-600 mb-8">
         MODBUS TCP/IP Temperature Monitoring
       </h2>
-      
+      <div className="melt_back  lg:w-1/2">
+        <Breadcrumb />
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         {[1, 2, 3].map((sensorNum) => (
           <div key={sensorNum} className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">

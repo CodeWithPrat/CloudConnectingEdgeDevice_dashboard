@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ReactApexChart from 'react-apexcharts';
+import Breadcrumb from '../Breadcrumb/Breadcrumb';
 
 const Gauge = ({ title, value, color }) => (
   <div className="w-full md:w-1/2 lg:w-1/4 xl:w-1/4 p-4">
@@ -178,6 +179,9 @@ const RS485 = () => {
          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-blue-600 mb-12">
         RS485
       </h2>
+      <div className="melt_back  lg:w-1/2">
+        <Breadcrumb />
+      </div>
       <div className="flex flex-wrap -mx-4">
         <Gauge title="VOLTAGE (VOLTS)" value={data.voltage} color="text-blue-500" />
         <Gauge title="CURRENT (AMPERE)" value={data.current} color="text-green-500" />

@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
+import Breadcrumb from '../Breadcrumb/Breadcrumb';
 import BarChart from './BarChart';
 
 const OeeGauges = () => {
@@ -54,6 +55,9 @@ const OeeGauges = () => {
   return (
     <div className='w-full'>
       <h1 className='flex justify-center items-center text-4xl font-semibold'>OEE</h1>
+      <div className="melt_back  lg:w-1/2">
+        <Breadcrumb />
+      </div>
       <div id="chart" className='flex w-full justify-center items-center gap-7 py-10'>
         {series.map((item, index) => (
           <div className='w-full' key={index}>

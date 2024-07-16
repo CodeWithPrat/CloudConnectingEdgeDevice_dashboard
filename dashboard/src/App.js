@@ -1,11 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import LoginPage from "./Components/LoginPage/LoginPage";
 import MainPage from './Components/MainPage/MainPage';
-import FeedDrive from './Components/RealTimeData/FeedDrive';
 import RTIndex from './Components/RealTimeData/RTIndex';
-import Spindle from './Components/RealTimeData/Spindle';
 import RS485 from './Components/RS485/RS485';
 import OeeGauges from './Components/OEE/OeeGauges';
 import MainIndex from './Components/RealTimeData/MainIndex';

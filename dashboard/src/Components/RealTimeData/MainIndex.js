@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import cmtilogo from "../../Images/CCED_imgs/cmtiLogo.jpeg";
+import Breadcrumb from '../Breadcrumb/Breadcrumb';
+import { FaHome } from "react-icons/fa";
 
 function MainIndex() {
     const [currentTime, setCurrentTime] = useState(new Date());
@@ -32,11 +34,20 @@ function MainIndex() {
                 <div className="text-right font-bold">
                     <p className="text-base md:text-xl">{currentTime.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
                     <p className="text-sm md:text-lg">{currentTime.toLocaleTimeString()}</p>
+                    <p>
+                        <Link to="/main" className="text-blue-600 hover:text-blue-800 transition-colors duration-200 flex items-center">
+                            <FaHome className="mr-2" size={30}/>
+                            <span className="hover:underline text-2xl">Home</span>
+                        </Link>
+                    </p>
                 </div>
             </div>
-
+            <div className="melt_back  lg:w-1/2">
+                <Breadcrumb />
+            </div>
             {/* Buttons Section */}
             <div className="flex flex-wrap justify-center items-center min-h-screen bg-gray-100 mt-[-100px]">
+
                 <div className="grid grid-cols-2 gap-4">
                     {buttons.map((button, index) => (
                         <button

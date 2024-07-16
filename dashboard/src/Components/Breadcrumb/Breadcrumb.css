@@ -1,0 +1,34 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .breadcrumb-enter {
+    opacity: 0;
+  }
+  
+  .breadcrumb-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+  
+  .breadcrumb-exit {
+    opacity: 1;
+  }
+  
+  .breadcrumb-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+  }
+  
+  @media (max-width: 640px) {
+    nav[aria-label="Breadcrumb"] {
+      font-size: 0.875rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    nav[aria-label="Breadcrumb"] {
+      font-size: 0.75rem;
+    }
+  }
