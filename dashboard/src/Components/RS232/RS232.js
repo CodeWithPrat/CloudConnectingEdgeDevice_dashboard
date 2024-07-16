@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Plotly from 'plotly.js-dist';
+import Breadcrumb from '../Breadcrumb/Breadcrumb';
 
 const RS232 = () => {
     const [plotInitialized, setPlotInitialized] = useState(false);
@@ -43,8 +44,10 @@ const RS232 = () => {
 
     return (
         <div className="mx-auto p-4">
-
             <h1 className='text-2xl md:text-3xl lg:text-4xl flex justify-center items-center font-semibold'>RS232</h1>
+            <div className="melt_back  lg:w-1/2">
+        <Breadcrumb />
+      </div>
             <div className='text-lg md:text-xl lg:text-2xl flex justify-center px-20 md:justify-start mt-6 md:mt-10 lg:mt-14'>
                 Received Data
             </div>
