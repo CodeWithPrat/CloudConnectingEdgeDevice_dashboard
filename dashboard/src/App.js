@@ -9,6 +9,7 @@ import OeeGauges from './Components/OEE/OeeGauges';
 import MainIndex from './Components/RealTimeData/MainIndex';
 import Supervisor from './Components/SupPage/supervisor';
 import Temperature from './Components/Temperature/Temperature';
+import RS232 from './Components/RS232/RS232';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/main" element={<MainPage />} />
           <Route path="/temperature" element={<Temperature />} />
           <Route path="/RS485" element={<RS485 />} />
+          <Route path="/RS232" element={<RS232/>} />
           <Route path="/oee" element={<OeeGauges/>} />
           <Route path="/rtmain" element={<RTIndex />} />
           <Route path="/mainindex" element={<MainIndex />} />
