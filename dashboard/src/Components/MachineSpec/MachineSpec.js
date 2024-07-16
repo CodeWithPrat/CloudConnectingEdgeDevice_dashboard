@@ -5,6 +5,8 @@ import PDF3 from '../pdf/o032_cnc_operator_operation_manual_en.pdf';
 import PDF4 from '../pdf/Capture.JPG';
 import PDF5 from '../pdf/CNC-Turning-Machine-Parts.jpg';
 import PDF6 from '../pdf/DSC.JPG';
+import { useNavigate, Link } from 'react-router-dom';
+import { FaHome } from "react-icons/fa";
 
 const PdfViewer = () => {
   const [fileUrl, setFileUrl] = useState(null);
@@ -64,7 +66,12 @@ const PdfViewer = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center text-blue-600 mb-12">Machine Specifications and Documents</h1>
-      
+      <p>
+                        <Link to="/" className="text-blue-600 hover:text-blue-800 transition-colors duration-200 flex items-center">
+                            <FaHome className="mr-2" size={30}/>
+                            <span className="hover:underline text-2xl">Home</span>
+                        </Link>
+                    </p>
       <div className="w-full mx-auto p-4">
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between p-4 space-y-4 lg:space-y-0">
@@ -80,12 +87,12 @@ const PdfViewer = () => {
               ))}
             </div>
             <div className="flex space-x-2 justify-center lg:justify-end">
-              <button
+              {/* <button
                 onClick={handleReset}
                 className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-xs sm:text-sm lg:text-base"
               >
                 Reset
-              </button>
+              </button> */}
               <button
                 onClick={handleDownload}
                 className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-xs sm:text-sm lg:text-base"
