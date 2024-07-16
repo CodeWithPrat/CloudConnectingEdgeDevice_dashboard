@@ -58,7 +58,7 @@ function MainPage() {
             {/* Navigation Buttons */}
             <div className="flex flex-wrap justify-center w-full items-center p-4 gap-7 ">
                 <button className="mainpage_btn text-white text-center font-bold w-96 h-32 md:w-96 md:h-48 lg:w-[30rem] lg:h-56 rounded-full shadow-lg flex items-center justify-center"
-                    onClick={() => handleNavigate('/machine-specifications')}>
+                    onClick={() => handleNavigate('/machinespec')}>
                     <span className="text-xs md:text-base lg:text-lg px-2">Machine Specification and Job Drawings</span>
                 </button>
                 <button className="mainpage_btn text-white text-center font-bold w-96 h-32 md:w-96 md:h-48 lg:w-[30rem] lg:h-56 rounded-full shadow-lg flex items-center justify-center"

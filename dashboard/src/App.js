@@ -10,6 +10,7 @@ import MainIndex from './Components/RealTimeData/MainIndex';
 import Supervisor from './Components/SupPage/supervisor';
 import Temperature from './Components/Temperature/Temperature';
 import RS232 from './Components/RS232/RS232';
+import PdfViewer from './Components/MachineSpec/MachineSpec';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/oee" element={<OeeGauges/>} />
           <Route path="/rtmain" element={<RTIndex />} />
           <Route path="/mainindex" element={<MainIndex />} />
+          <Route path="/machinespec" element={<PdfViewer/>} />
 
         </Routes>
       </div>
