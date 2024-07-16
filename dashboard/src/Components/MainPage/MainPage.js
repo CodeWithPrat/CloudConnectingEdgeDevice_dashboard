@@ -29,7 +29,7 @@ function MainPage() {
             <div className="w-full flex flex-col md:flex-row items-center justify-between bg-white shadow-md py-4 px-8">
                 <img src={cmtilogo} alt="Company Logo" className="h-20 md:h-36 mr-4 mb-4 md:mb-0" />
                 <h1 className="text-2xl md:text-5xl font-bold text-sky-700 mb-4 md:mb-0" style={{ fontFamily: 'serif' }}>
-                    Cloud Connecting EDGE Device
+                    Machine To Cloud Connecting EDGE Device
                 </h1>
                 <div className="text-right font-bold">
                     <p className="text-base md:text-xl">{currentTime.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>

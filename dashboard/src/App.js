@@ -19,9 +19,9 @@ function App() {
     <Router>
       <div>
         <Routes>
-          <Route path="/" element={<LoginPage />} />
+          <Route path="/" element={<MainPage />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/supervisor" element={<Supervisor />} />
-          <Route path="/main" element={<MainPage />} />
           <Route path="/temperature" element={<Temperature />} />
           <Route path="/RS485" element={<RS485 />} />
           <Route path="/RS232" element={<RS232/>} />
