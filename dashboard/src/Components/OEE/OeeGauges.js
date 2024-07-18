@@ -50,19 +50,11 @@ const OeeGauges = () => {
         const OEELoss = totalOEE - OEE;
 
         setSeries([
-<<<<<<< Updated upstream
           { name: 'Availability', data: avai },
           { name: 'Performance', data: performance },
           { name: 'Quality', data: quality },
           { name: 'OEE', data: OEE },
           { name: 'OEE Loss', data: OEELoss.toFixed(2) } // Round to 2 decimal places
-=======
-          { name: 'Availability', data: data.voltage },
-          { name: 'Performance', data: data.voltage },
-          { name: 'Quality', data: data.current },
-          { name: 'OEE', data: data.torque },
-          { name: 'OEE Loss', data: data.temperature }
->>>>>>> Stashed changes
         ]);
       })
       .catch(error => {
