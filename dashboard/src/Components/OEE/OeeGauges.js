@@ -55,6 +55,7 @@ const OeeGauges = () => {
           { name: 'Quality', data: quality },
           { name: 'OEE', data: OEE },
           { name: 'OEE Loss', data: OEELoss.toFixed(2) } // Round to 2 decimal places
+
         ]);
       })
       .catch(error => {
